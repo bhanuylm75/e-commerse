@@ -1,0 +1,10 @@
+.auth{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+.con-sign{
+  margin-right: 120px;
+}

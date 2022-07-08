@@ -1,0 +1,38 @@
+.remove-button {
+  padding-left: 12px;
+  cursor: pointer;
+}
+.checkout-item-container {
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid darkgrey;
+  padding: 15px 0;
+  font-size: 20px;
+  align-items: center;
+}
+.image-container {
+  width: 23%;
+  padding-right: 15px;
+}
+.name{
+  width: 23%;
+}
+.quantity{
+  width: 23%;
+  display: flex;
+}
+.price{
+  width: 23%;
+}
+.arrow {
+  cursor: pointer;
+}
+
+.value {
+  margin: 0 10px;
+}
+.checkout-img {
+  width: 23%;
+  height: 100%;
+  padding-right: 15px;
+}

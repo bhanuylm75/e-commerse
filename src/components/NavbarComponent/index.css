@@ -1,0 +1,65 @@
+.navbar{
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.nav-con{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: black;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  
+}
+.shop{
+  padding-right: 25px;
+  font-size: 13px;
+  color: black;
+  text-decoration: none;
+  vertical-align: middle;
+}
+.signin{
+  padding-right: 25px;
+  font-size: 13px;
+  color: black;
+  text-decoration: none;
+  vertical-align: middle;
+}
+.contact{
+  font-size: 18px;
+
+  
+}
+.logo{
+  cursor: pointer;
+  height: 100%;
+  width: 70px;
+}
+.cart-logo{
+  height:20px ;
+  width:20px ;
+  vertical-align: middle;
+}
+.cart-icon-container{
+  width: 45px;
+  height: 45px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.shopping-icon {
+  width: 24px;
+  height: 24px;
+}
+.item-count {
+  position: absolute;
+  font-size: 10px;
+  font-weight: bold;
+  bottom: 12px;
+}

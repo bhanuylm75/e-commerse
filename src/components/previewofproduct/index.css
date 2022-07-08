@@ -1,0 +1,17 @@
+.main{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.title {
+  font-size: 28px;
+  margin-bottom: 25px;
+  cursor: pointer;
+  color:gray;
+  text-decoration: none;
+}
