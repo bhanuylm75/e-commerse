@@ -1,0 +1,15 @@
+.sign-up-container {
+  display: flex;
+  flex-direction: column;
+  width: 394px;
+}
+@media only screen  and (max-width:820px) {
+  .sign-up-container{
+    width: 80%;
+   
+  }
+}
+
+  h3 {
+    margin: 10px 0;
+  }

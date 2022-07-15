@@ -4,12 +4,8 @@ import "./index.css"
 const Authentication=()=>{
   return(
     <div className="auth">
-      <div className="con-sign">
       <SignInForm/>
-      </div>
-     <div>
      <SignUpForm/>
-     </div>
     </div>
   )
 }

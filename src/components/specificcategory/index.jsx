@@ -1,4 +1,4 @@
-import { useContext,  Fragment } from 'react';
+import { useContext, useState, Fragment ,useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 
 import Productcard from '../productcard';
@@ -10,15 +10,23 @@ import './index.css';
 const Category = () => {
   const { id,title } = useParams();
   const { categoriesMap } = useContext(ProductsContext);
-  const products=categoriesMap[id].items
-  console.log(products)
+  const [pro, setPro] = useState([]);
+  const num=parseInt(id)
+ const fun= async()=>{
+  const details= await categoriesMap[num].items
+  setPro(details)
+ }
+  useEffect(() => {
+  fun();
+  },);
+
 
   return (
     <Fragment>
       <h2 className='category-title'>{title.toUpperCase()}</h2>
       <div className='category-container'>
-        {products &&
-          products.map((product) => (
+        {
+          pro.map((product) => (
             <Productcard key={product.id} product={product} />
           ))}
       </div>

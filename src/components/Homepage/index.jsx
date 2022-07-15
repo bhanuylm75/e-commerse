@@ -34,14 +34,14 @@ const Home=()=>{
   return(
     <div className="container">
       {items.map((eachitem,index)=>(
-        <div key={eachitem.id}  className={`categories ${eachitem.title}`} style={{backgroundImage: `url(${eachitem.imageUrl})`}}>
-        <Link className="inner-con" to={`shop/${eachitem.title}${index}`}>
-        <div>
-          <h2>{eachitem.title}</h2>
-          <p>Shop Now</p>
-        </div>
-        </Link>
-       </div>
+          <div key={eachitem.id} className={`categories  ${eachitem.title}`} style={{ backgroundImage: `url(${eachitem.imageUrl})` }}>
+            <Link className="inner-con" to={`shop/${eachitem.title}${index}`}>
+              <div className="body">
+                <h2>{eachitem.title}</h2>
+                <p>Shop Now</p>
+              </div>
+            </Link>
+          </div>
       ))}
     </div>
 

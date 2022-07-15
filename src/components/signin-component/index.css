@@ -1,15 +1,77 @@
 .sign-in-container {
   display: flex;
   flex-direction: column;
-  width: 380px;
+  width: 394px;
 }
-
-  h2 {
+@media only screen  and (max-width:820px) {
+  .sign-in-container{
+    margin-bottom: 50px;
+    width: 80%;
+  }
+}
+  h3 {
     margin: 10px 0;
   }
 
   .buttons-container {
     display: flex;
     justify-content: space-between;
+    
   }
   
+  .button {
+    width: auto;
+    letter-spacing: 0.5px;
+    line-height: 50px;
+    padding: 0 35px 0 35px;
+    font-size: auto;
+    color:#ffff;
+    text-transform: uppercase;
+    font-family: 'Open Sans Condensed';
+    font-weight: bolder;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+
+  }
+  .button:hover {
+    color: black;
+    background-color:white;
+    border: 1px solid black;
+  }
+  .google-butt{
+    width: auto;
+    padding: 0 35px 0 35px;
+    font-size: 15px;
+    background-color: #4285f4;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Open Sans Condensed';
+    font-weight: bolder;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  @media only screen  and (max-width:820px) {
+    .button{
+      padding: 5px;
+      width: 45%;
+      
+      height: 40px;
+    }
+    .google-butt{
+     padding: 5px;
+     font-size: 10px;
+     width: 48%;
+     
+     height: 40px;
+     
+
+    }
+  }

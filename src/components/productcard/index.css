@@ -1,29 +1,91 @@
 .cap{
   display: flex;
   flex-direction: column;
-  align-items: center;
   position: relative;
   justify-content: center;
-  width: 280px;
+  align-items: center;
+  
+  width: 25%;
+  height: 350px;
+  margin-bottom: 50px;
 }
 .img{
-  width: 280px;
-  height: 320px;
+  width: 97%;
+  height: 95%;
   object-fit: cover;
 }
-
 .hats-inner{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+  padding: 10px;
+  
 }
-.button-add {
-  width: 80%;
-  opacity: 0.7;
-  position: absolute;
-  top:255px;
+.button-product {
+  width: auto;
+  height: 40px;
+  letter-spacing: 0.5px;
+  line-height: 50px;
+  padding: 0 35px 0 35px;
+  font-size: 15px;
+  background-color: white;
+  color:black;
+  text-transform: uppercase;
+  font-family: 'Open Sans Condensed';
+  font-weight: bolder;
+  border: none;
   cursor: pointer;
+  display: none;
+  justify-content: center;
+  position: absolute;
+  align-items: center;
+  top: 60%;
+}
+.button-product:hover{
+  background-color:black ;
+  color: white;
+}
+@media only screen and (max-width:800px) {
+  .cap{
+    width:50% ;
+    height: 290px;
+    margin-bottom: 10px;
+    
+    
+  }
+  .img{
+    width: 97%;
+    height: 95%;
+    
+    border-style: solid;
+    border-radius: 10px;
+    border-color: transparent;
+    
+  }
+  .hats-inner{
+    width: 100%;
+    
+    
+  }
+  .button-product{
+    width: 80%;
+    display: flex;
+    padding: 0px;
+    font-size: 10px;
+    height: 30px;
+    font-size: 10px;
+    top:50%
+  }
+  
+  
+}
 
 
+
+
+
+
+.cap:hover .button-product {
+  display: flex;
 }

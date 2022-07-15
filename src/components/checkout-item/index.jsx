@@ -18,7 +18,9 @@ const Checkoutitem=({cartitem})=>{
   }
   return(
     <div className='checkout-item-container'>
-      <img src={imageUrl} className="checkout-img" alt={`${name}`} />
+    <div className='image-container'>
+      <img className="checkout-img" src={imageUrl} alt={`${name}`} />
+    </div>
     <span className='name'> {name} </span>
     <span className='quantity'>
       <div className='arrow' onClick={ondecrement}>
@@ -34,7 +36,6 @@ const Checkoutitem=({cartitem})=>{
       &#10005;
     </div>
   </div>
-    
   )
 }
 export default Checkoutitem

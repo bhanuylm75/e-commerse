@@ -5,11 +5,11 @@ import ProductPreview from '../previewofproduct';
 
 const CategoriesPreview = () => {
   const { categoriesMap } = useContext(ProductsContext);
-  //console.log(categoriesMap)
+  console.log(categoriesMap)
 
   return (
     <Fragment>
-      {categoriesMap.map((each,index) => {
+      {categoriesMap?.map((each,index) => {
         const products = each.items;
         //console.log(products)
         const title=each.title

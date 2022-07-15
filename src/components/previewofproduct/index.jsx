@@ -14,7 +14,7 @@ const ProductPreview = ({ title, products,index }) => {
         </Link>
       </h2>
       <div className='main'>
-        {products
+        { products && products
           .filter((each,id) => id < 4)
           .map((product) => (
             <Productcard key={product.id} product={product} />

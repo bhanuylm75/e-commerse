@@ -4,20 +4,30 @@ import { Link } from "react-router-dom"
 import { useContext } from "react"
 import { CartContext } from "../cartcontext"
 import CartDropdown from "../cartdropdown"
+import { signOutUser } from "../firebase/firebase.js"
+import { UserContext } from "../userContext"
 import './index.css'
 const NavbarComponent = ()=> {
-  const { isCartOpen, setIsCartOpen } = useContext(CartContext);
+  const { isCartOpen, setIsCartOpen ,cartCount} = useContext(CartContext);
+  const { currentUser } = useContext(UserContext);
+  console.log(currentUser)
 
   const toggleIsCartOpen = () => setIsCartOpen(!isCartOpen);
   return (
     <div className="nav-con">
-     <div className="logo"> <Logo/></div>
+     <Link to="/" className="logo"> <Logo/></Link>
      <div className="navbar">
-       <Link to="/shop" className="shop">Shop</Link>
-       <Link to="/signin" className="signin">signin</Link>
+       <Link to="/shop" className="shop">SHOP</Link>
+       {currentUser ? (
+            <span className="signin" onClick={signOutUser}>
+              SIGN OUT
+            </span>
+          ) : (
+            <Link to='/auth' className="signin">SIGN IN</Link>
+          )}
        <div className='cart-icon-container' onClick={toggleIsCartOpen}>
        <Cart className='shopping-icon' />
-      <span className='item-count'>0</span>
+      <span className='item-count'>{cartCount}</span>
        </div>
      </div>
      {isCartOpen&&<CartDropdown/>}

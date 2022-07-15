@@ -13,9 +13,9 @@ class App extends Component {
         <NavbarComponent/>
           <Routes>
             <Route  path="/" element={<Home/>}/>
-            <Route path="/signin" element={<Authentication/>}/>
             <Route path="/shop/*" element={<Shop/>}/>
             <Route path="/checkout" element={<Checkout/>}/>
+            <Route path="/auth" element={<Authentication/>}/>
           </Routes>
       </div>
 

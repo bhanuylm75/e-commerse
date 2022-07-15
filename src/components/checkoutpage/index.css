@@ -1,10 +1,10 @@
 .checkout-container {
-  width: 55%;
-  min-height: 90vh;
   display: flex;
   flex-direction: column;
+  margin: 50px auto 0px;
+  width: 60%;
   align-items: center;
-  margin: 50px auto 0;
+  min-height: 90vh;
 }
 .checkout-header {
   width: 100%;
@@ -19,4 +19,28 @@
 }
 .remove{
   width: 8%;
+}
+@media only screen and (max-width:600px) {
+  .checkout-container{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .checkout-header{
+    padding: 0px;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .remove{
+    width: 22%;
+  }
+  
+}
+.total {
+  margin-top: 30px;
+  margin-left: auto;
+  font-size: 36px;
 }
