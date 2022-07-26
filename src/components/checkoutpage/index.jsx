@@ -2,6 +2,7 @@ import "./index.css"
 import { useContext } from "react";
 import { CartContext } from "../cartcontext";
 import Checkoutitem from "../checkout-item";
+import Pay from "../payments/payments";
 const Checkout=()=>{
   const { cartitems ,cartTotal} = useContext(CartContext);
   return(
@@ -27,6 +28,7 @@ const Checkout=()=>{
         <Checkoutitem key={eachitem.id} cartitem={eachitem}/>
       ))}
         <span className='total'>Total: ${cartTotal}</span>
+        <Pay/>
     </div>
     
   )

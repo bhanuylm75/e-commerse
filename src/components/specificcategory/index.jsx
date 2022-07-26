@@ -12,12 +12,15 @@ const Category = () => {
   const { categoriesMap } = useContext(ProductsContext);
   const [pro, setPro] = useState([]);
   const num=parseInt(id)
+  //console.log(num)
  const fun= async()=>{
   const details= await categoriesMap[num].items
   setPro(details)
+  console.log("bb")
  }
   useEffect(() => {
   fun();
+  //console.log(num)
   },);
 
 
@@ -26,7 +29,7 @@ const Category = () => {
       <h2 className='category-title'>{title.toUpperCase()}</h2>
       <div className='category-container'>
         {
-          pro.map((product) => (
+          pro?.map((product) => (
             <Productcard key={product.id} product={product} />
           ))}
       </div>
